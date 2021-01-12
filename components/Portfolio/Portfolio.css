@@ -1,0 +1,237 @@
+*{
+    margin:0;
+    padding:0;
+    font-family:inherit;
+ }
+ .container-fluid{
+     display:flex;
+     width:100%;
+     min-height:100vh;
+     padding:20px;
+     flex-wrap:wrap;
+     box-sizing:border-box;
+ }
+
+ .container-fluid .card{
+     display:flex;
+     flex-direction:column;
+     position:relative;
+     margin:5px;
+     height:300px;
+     overflow:hidden;
+     width: calc(50% - 10px);
+     text-align:center;
+ }
+
+ .container-fluid .card img{
+     position:absolute;
+     z-index:1;
+     height:100%;
+     width:100%;
+     object-fit:cover;
+     top:0;
+     left:0;
+ }
+
+ .container-fluid .card .card--info
+ {
+     position:absolute;
+     z-index:2;
+     height: 100%;
+     width:100%;
+     display:flex;
+     flex-direction:column;
+     padding:10px;
+     box-sizing:border-box;
+     background:rgba(0,0,0,0.5);
+     justify-content: flex-end;
+     opacity:0;
+     transition:0.3s ease;
+ }
+
+ .container-fluid .card .card--info h1
+ {
+     color:#fff;
+     font-size: 1.2em;
+     font-family: inherit;
+     font-style:italic;
+     font-weight: normal;
+     /* text-shadow:0 0 1px #ddd, 0.5px 0.5px 1px #ddd, 1px 1px 1px #ddd; */
+
+ }
+
+ .container-fluid .card .card--info label
+ {
+     color:#e8eae6;
+     font-size:medium;
+     margin-top:20px;
+ }
+
+ .container-fluid .card .card--info button
+ {
+    padding:5px;
+    border:none;
+    outline:none;
+    background: #ffcc29;
+    color: black;
+    width:20%;
+    font-size:18px;
+    border-radius: 100%;
+ } 
+
+ .container-fluid .card .card--info h1,
+ .container-fluid .card .card--info label,
+ .container-fluid .card .card--info button
+ {
+     transform:translateX(-800px);
+     transition:0.3s ease;
+     transition-delay:0.3s;
+ }
+
+ .container-fluid .card .card--info
+ {
+     opacity:1;
+ }
+ .container-fluid .card 
+ {
+     opacity:0.6;
+     background:rgba(255, 204, 41, 0.3);
+ }
+ .container-fluid .card:hover,
+ .container-fluid .card:hover .card--info h1,
+ .container-fluid .card:hover .card--info label,
+ .container-fluid .card:hover .card--info button
+ {
+     transform:translateX(0);
+     transition:0.3s ease;
+     transition-delay:0.2s;
+     opacity: 1;
+ }
+
+ .lightbox
+ {
+    position: fixed;
+    top:0; left:0;
+    display: flex;
+    padding: 10px;
+    /* justify-content: center;
+    align-items: center; */
+    width: 100%;
+    z-index: 3;
+    background:rgba(0,0,0,.5);
+    min-height: 100vh;
+    display:none;
+ }
+
+ .lightbox .carousel
+ {
+     height:40px;
+     width:40px;
+     position:absolute;
+     top:calc(50% - 20px);
+     background:rgba(255,255,255,0.5);
+     border-radius:50%;
+     z-index:6;
+ }
+
+ .lightbox .carousel span
+ {
+     height:3px;
+     width:10px;
+     position:absolute;
+     left:calc(50% - 5px);
+     top:calc(50% - 1.5px);
+     background:rgba(0,0,0,0.8);
+     border-radius:10px;
+     display:block;
+ }
+
+ .lightbox .carousel.left
+ {
+     left:5px;
+ }
+
+ .lightbox .carousel.right 
+ {
+     right:0;
+     right:5px;
+
+ }
+
+ .lightbox .carousel.left span:nth-child(1)
+ {
+     transform:rotate(-30deg);
+     transform-origin:left;
+     
+ }
+
+ .lightbox .carousel.left span:nth-child(2)
+ {
+     transform:rotate(30deg);
+     transform-origin:left;
+ }
+
+ .lightbox .carousel.right span:nth-child(1)
+ {
+     transform:rotate(-30deg);
+     transform-origin:right;
+     
+ }
+
+ .lightbox .carousel.right span:nth-child(2)
+ {
+     transform:rotate(30deg);
+     transform-origin:right;
+ }
+
+ .lightbox .carousel:hover
+ {
+    background:rgba(255, 204, 41, 0.3);
+ }
+
+ .lightbox .carousel:hover span
+ {
+     background: #fff;
+     transition:0.3s;
+ }
+
+ .lightbox .close
+ {
+     background: rgba(255,255,255,0.5);
+     position: relative;
+     height:40px;
+     width:40px;
+     text-align:center;
+     margin-top:90px;
+     font-size:20px;
+     border-radius:20px;
+     line-height:20px;
+     color:#000;
+     transition:0.3s;
+     z-index:6;
+     cursor:pointer;
+     left:-5px;
+ }
+ .lightbox .close:hover{
+     background:rgba(255, 204, 41, 0.3);
+     color:#fff;
+ }
+ .lightbox .carousel:hover span
+ {
+     background:#fff;
+ }
+
+ .lightbox img{
+     position: absolute;
+     height:70%;
+     width:70%;
+     left:50%;
+     top:50%;
+     transform: translate(-50%,-50%);
+     object-fit:cover;
+     border:1px solid #fff;
+     
+ }
+
+
+
