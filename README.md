@@ -1,3 +1,3 @@
 # Construction-Template-React
 
-Preview - [Demo](http://garyglobalsolutions.com/angular-template/build/)
+Preview - [Link](http://garyglobalsolutions.com/angular-template/build/)
