@@ -1,44 +1,50 @@
 import React,{useState} from 'react';
 // import image from '../../assets/img';
 import '../Portfolio/Portfolio.css';
+import b1 from '../../assets/img/b1.jpg';
+import b2 from '../../assets/img/b2.png';
+import b3 from '../../assets/img/b3.png';
+import b4 from '../../assets/img/b4.jpg';
+import b5 from '../../assets/img/b5.jpg';
+import b6 from '../../assets/img/b6.png';
 
 const imageData=[
     {
-        "image":"https://b-scpa.com/wp-content/uploads/2015/10/ThinkstockPhotos-476152048.jpg",
+        "image":`${b1}`,
         "title":"Building1",
         "place":"City1",
         "index":"0"
     },
     {
-        "image":"https://source.unsplash.com/user/erondu/1600x1000",
+        "image":`${b6}`,
         "title":"Building2",
         "place":"City2",
         "index":"1"
     },
     {
-        "image":"https://source.unsplash.com/user/erondu/1600x1000",
+        "image":`${b2}`,
         "title":"Building3",
         "place":"City3",
         "index":"2"
     },
     {
-        "image":"https://b-scpa.com/wp-content/uploads/2015/10/ThinkstockPhotos-476152048.jpg",
+        "image":`${b3}`,
         "title":"Building4",
         "place":"City4",
         "index":"3"
     },
     {
-        "image":"https://b-scpa.com/wp-content/uploads/2015/10/ThinkstockPhotos-476152048.jpg",
+        "image":`${b4}`,
         "title":"Building5",
         "place":"City5",
         "index":"4"
     },
     {
-        "image":"https://source.unsplash.com/user/erondu/1600x1000",
+        "image":`${b5}`,
         "title":"Building6",
         "place":"City6",
         "index":"5"
-    }
+    },
 ]
 
 const Portfolio=()=>{
@@ -53,13 +59,13 @@ const Portfolio=()=>{
     }
 
     const card = imageData.map(function(obj,i){
-        return (<div className="card" key={i}>
+        return (
+        <div className="card" key={i}>
             <img src={obj.image} alt="building"/>
             <div className="card--info">
-                <h1 className="card-title">{obj.title}</h1>
                 {/* <label className="card--place">{obj.place}</label><br/> */}
 
-                <center><button id={i} onClick={showImage}>👁️</button></center>
+                <center><button id={i} onClick={showImage}><i className="fa fa-paper-plane" aria-hidden="true"></i></button></center>
             </div>
         </div>)
     })
@@ -99,16 +105,20 @@ const Portfolio=()=>{
         <div>
             {/* card */}
 
-            <section className="page-section bg-light" id="portfolio">
-
+            <div className="page-section bg-light" id="portfolio" >
+                <br/><br/>
                 <div className="text-center">
                         <h2 className="section-heading text-uppercase">Gallery</h2>
-                        <h3 className="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+                        <h3 className="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.
+                        <center><hr width="30%"/></center>
+                        </h3>
                 </div>
-                <div className="container-fluid">
+                
+                <div className="container c">
                     {card}
                 </div>
-            </section>
+            </div>
+           
 
             {/* lightbox */}
             
