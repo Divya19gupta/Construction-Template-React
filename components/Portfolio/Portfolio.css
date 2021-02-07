@@ -1,29 +1,46 @@
 *{
-    margin:0;
+    margin:0px;
     padding:0;
     font-family:inherit;
  }
- .container-fluid{
+ .c{
      display:flex;
      width:100%;
      min-height:100vh;
      padding:20px;
      flex-wrap:wrap;
      box-sizing:border-box;
+     text-align: center;
  }
 
- .container-fluid .card{
+ .c .card{
      display:flex;
      flex-direction:column;
      position:relative;
-     margin:5px;
-     height:300px;
+     /* margin:10px;
+     height:300px; */
      overflow:hidden;
-     width: calc(50% - 10px);
-     text-align:center;
- }
+     width: 32.66%;
+  margin: 3px;
+  height:300px;
+  align-items: center;
+  justify-content: center;
 
- .container-fluid .card img{
+ }
+ @media only screen and (min-width : 768px) and (max-width : 1024px) {
+    .c .card{
+        width: calc(49%);
+        text-align:center;
+    }
+}
+ @media only screen and (max-width: 767px), only screen and (max-device-width: 767px) {
+    .c .card{
+        width: calc(98%);
+        text-align:center;
+    }
+}
+
+ .c .card img{
      position:absolute;
      z-index:1;
      height:100%;
@@ -31,9 +48,15 @@
      object-fit:cover;
      top:0;
      left:0;
+     margin:0 auto;
  }
+ .c .card:hover{
+    border-color:#f9813a;
+    box-shadow:2px 2px 2px 2px #f9813a;
 
- .container-fluid .card .card--info
+}
+
+ .c .card .card--info
  {
      position:absolute;
      z-index:2;
@@ -49,9 +72,9 @@
      transition:0.3s ease;
  }
 
- .container-fluid .card .card--info h1
+ .c .card .card--info h1
  {
-     color:#fff;
+     /* color:#fff; */
      font-size: 1.2em;
      font-family: inherit;
      font-style:italic;
@@ -60,47 +83,49 @@
 
  }
 
- .container-fluid .card .card--info label
+ .c .card .card--info label
  {
-     color:#e8eae6;
+     /* color:#e8eae6; */
      font-size:medium;
      margin-top:20px;
  }
 
- .container-fluid .card .card--info button
+ .c .card .card--info button
  {
     padding:5px;
     border:none;
     outline:none;
-    background: #ffcc29;
+    background: #f9813a;
     color: black;
     width:20%;
     font-size:18px;
     border-radius: 100%;
  } 
 
- .container-fluid .card .card--info h1,
- .container-fluid .card .card--info label,
- .container-fluid .card .card--info button
+ .c .card .card--info h1,
+ .c .card .card--info label,
+ .c .card .card--info button
  {
      transform:translateX(-800px);
      transition:0.3s ease;
      transition-delay:0.3s;
  }
 
- .container-fluid .card .card--info
+ .c .card .card--info
  {
-     opacity:1;
+     opacity:0.7;
+     transition:0.3s ease;
+     transition-delay:0.2s;
  }
- .container-fluid .card 
+ .c .card 
  {
-     opacity:0.6;
+     /* opacity:0.6; */
      background:rgba(255, 204, 41, 0.3);
  }
- .container-fluid .card:hover,
- .container-fluid .card:hover .card--info h1,
- .container-fluid .card:hover .card--info label,
- .container-fluid .card:hover .card--info button
+ .c .card:hover,
+ .c .card:hover .card--info h1,
+ .c .card:hover .card--info label,
+ .c .card:hover .card--info button
  {
      transform:translateX(0);
      transition:0.3s ease;
@@ -121,6 +146,8 @@
     background:rgba(0,0,0,.5);
     min-height: 100vh;
     display:none;
+    transition:0.3s ease;
+     transition-delay:0.2s;
  }
 
  .lightbox .carousel
@@ -132,6 +159,8 @@
      background:rgba(255,255,255,0.5);
      border-radius:50%;
      z-index:6;
+     transition:0.3s ease;
+     transition-delay:0.2s;
  }
 
  .lightbox .carousel span
@@ -144,6 +173,8 @@
      background:rgba(0,0,0,0.8);
      border-radius:10px;
      display:block;
+     transition:0.3s ease;
+     transition-delay:0.2s;
  }
 
  .lightbox .carousel.left
@@ -162,47 +193,59 @@
  {
      transform:rotate(-30deg);
      transform-origin:left;
-     
+     transition:0.3s ease;
+     transition-delay:0.2s;
  }
 
  .lightbox .carousel.left span:nth-child(2)
  {
      transform:rotate(30deg);
      transform-origin:left;
+     transition:0.3s ease;
+     transition-delay:0.2s;
  }
 
  .lightbox .carousel.right span:nth-child(1)
  {
      transform:rotate(-30deg);
      transform-origin:right;
-     
+     transition:0.3s ease;
+     transition-delay:0.2s;
  }
 
  .lightbox .carousel.right span:nth-child(2)
  {
      transform:rotate(30deg);
      transform-origin:right;
+     transition:0.3s ease;
+     transition-delay:0.2s;
  }
 
  .lightbox .carousel:hover
  {
     background:rgba(255, 204, 41, 0.3);
+    transition:0.3s ease;
+     transition-delay:0.2s;
  }
 
  .lightbox .carousel:hover span
  {
      background: #fff;
      transition:0.3s;
+     transition:0.3s ease;
+     transition-delay:0.2s;
  }
 
- .lightbox .close
+ .lightbox button
  {
      background: rgba(255,255,255,0.5);
      position: relative;
+     float: right;
      height:40px;
      width:40px;
-     text-align:center;
-     margin-top:90px;
+     margin: auto 0 auto auto;
+     margin-top:30px;
+     /* margin-left:94%; */
      font-size:20px;
      border-radius:20px;
      line-height:20px;
@@ -210,11 +253,13 @@
      transition:0.3s;
      z-index:6;
      cursor:pointer;
-     left:-5px;
+     /* right:-12px; */
  }
  .lightbox .close:hover{
      background:rgba(255, 204, 41, 0.3);
      color:#fff;
+     transition:0.3s ease;
+     transition-delay:0.2s;
  }
  .lightbox .carousel:hover span
  {
@@ -230,8 +275,15 @@
      transform: translate(-50%,-50%);
      object-fit:cover;
      border:1px solid #fff;
+     transition:0.3s ease;
+     transition-delay:0.2s;
      
  }
+ hr{
+    height:1.5px;
+    border-width:0;
+    background-color:gray;
+  }
 
 
 
