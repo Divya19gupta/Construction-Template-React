@@ -5,14 +5,14 @@ import './components/Portfolio/Portfolio';
 import Portfolio from './components/Portfolio/Portfolio';
 import {Modal, Button} from 'react-bootstrap';
 import logo from './assets/img/logo.png';
-import stair from './assets/img/stair.jpg';
+import stair from './assets/img/stair.png';
 import ParticlesBg from 'particles-bg';
-import p1 from './assets/img/1.jpg';
-import p2 from './assets/img/2.jpg';
-import p3 from './assets/img/3.jpg';
+import p1 from './assets/img/1.png';
+import p2 from './assets/img/2.png';
+import p3 from './assets/img/3.png';
 import person1 from './assets/img/person1.jpg';
-import person2 from './assets/img/person2.jpg';
-import person3 from './assets/img/person3.jpg';
+import person2 from './assets/img/person2.png';
+import person3 from './assets/img/person3.png';
 
 function LoginModal(props) {
   return (
@@ -128,7 +128,7 @@ function App() {
   <div className="navbar" style={{backgroundColor:"white"}}>
   
   <div className="container">
-    <a href="#page-top"><img src={logo} height="60px" width="90px"/></a>
+    <a href="#page-top"><img src={logo}style={{marginLeft:"40px"}} height="60px" width="90px"/></a>
       <ul className="list-inline">
         <li className="list-inline-item i1">
         <i className="ico fa fa-map-marker fa-2x" aria-hidden="true"></i>&nbsp;&nbsp;
@@ -330,8 +330,8 @@ function App() {
         {/* <!-- Contact--> */}
 
           <section className="page-section" id="contact">
-            
-                    <div className="row p-5">
+            <div className="container">
+                    <div className="row pt-5 pl-3">
                         
                         <div className="col-md-4 topic">
                             <p className="upper">Ready to get started?</p>
@@ -340,6 +340,7 @@ function App() {
                 printing and typesetting industry. 
                 Lorem Ipsum has been the industry's standard dummy </p>
                         </div>
+
                         <div className="col-md-4">
                             <div className="form-group">
                             <label>First Name *</label>
@@ -356,9 +357,8 @@ function App() {
                             <input type="text"name=""className="form-control"/>
                             </div>
                             <br/>
-                            
-
                         </div>
+  
                         <div className="col-md-4">
                             <div className="form-group">
                             <label>Email *</label>
@@ -386,7 +386,8 @@ function App() {
                         </div>
                         <div className="col-sm-4"></div>
 
-                        </div>     
+                        </div> 
+                        </div>    
         </section>
         
         {/* <!-- Footer--> //f4f4f2 */}
@@ -484,11 +485,11 @@ function App() {
         </div>
           <br/>
         
-    
-        <div className="container row">
+          </div>
+        <div className="container-fluid row">
 
-          <div className="col-sm-4 borbox">
-          <span className="row p-2">
+          <div className="col-sm-2 borbox">
+          <span className="row p-3">
             
                 <span className="col-xs-6 ic">
                   <i class="fa fa-map-marker fa-3x" aria-hidden="true"></i>
@@ -497,14 +498,14 @@ function App() {
                 <span className="col-xs-6 topic">
                   Address<br/>
                   <span className="subtopic">
-                  No.123<br/> Chalingt Gates,<br/>
-                  New York
+                  No.123<br/>Gates, NY
+                  
                   </span>
                 </span>
             </span>
           </div>
 
-          <div className="col-sm-4 borbox">
+          <div className="col-sm-2 borbox">
           <span className="row p-2">
             
             <span className="col-xs-6 ic">
@@ -512,7 +513,7 @@ function App() {
             </span>
 
             <span className="col-xs-6 topic">
-              Phone Number<br/>
+              Number<br/>
               <span className="subtopic">
               0172-XXX<br/>
               98XXXXXX09
@@ -521,7 +522,7 @@ function App() {
         </span>
           </div>
 
-          <div className="col-sm-4 borbox">
+          <div className="col-sm-2 borbox">
           <span className="row p-2">
             
             <span className="col-xs-6 ic">
@@ -531,14 +532,14 @@ function App() {
             <span className="col-xs-6 topic">
               E-mail<br/>
               <span className="subtopic">
-              demo1@id.com<br/>
-              demo2@id.com
+              demo@1.com<br/>
+              demo@2.com
               </span>
             </span>
         </span>
           </div>
 
-          <div className="col-sm-4 borbox">
+          <div className="col-sm-2 borbox">
           <span className="row p-2">
             
             <span className="col-xs-6 ic">
@@ -548,15 +549,15 @@ function App() {
             <span className="col-xs-6 topic">
               Fax<br/>
               <span className="subtopic">
-              FAX: (123) 123-4567<br/>
-              FAX: (123) 123-4567
+              (123)123-4567<br/>
+              (123)123-4567
               </span>
             </span>
         </span>
           </div>
 
       </div>
-      </div>
+      
       </footer>
 
       <hr style={{backgroundColor:"#f58634", width:"100%", height:"0.1px"}}/>
