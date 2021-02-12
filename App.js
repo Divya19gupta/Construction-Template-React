@@ -1,4 +1,3 @@
-// import logo from './logo.svg';
 import './assets/css/style.css';
 import React, {useEffect, useState} from 'react';
 import './components/Portfolio/Portfolio';
